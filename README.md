@@ -2,6 +2,10 @@
 
 Exemplo de SAGA utilizando NIFI para orquestrar event-driven microservices
 
+Contexto:
+
+- Quando construímos nosso modelo de domínio usando a terminologia DDD, identificamos Entidades, Objetos de Valor (atributos) e Agregados (conjunto de entidades/atributos). Os agregados são objetos que encapsulam outras entidades / atributos e são responsáveis por impor restrições (pode haver vários agregados dentro de um determinado contexto (bounded context).
+ 
 Diagrama:
 
 > https://dbdiagram.io/d/6183dfe4d5d522682df8aea9
