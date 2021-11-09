@@ -21,6 +21,7 @@ Sequência de eventos:
 ![alt text](https://imgopt.infoq.com/fit-in/1200x2400/filters:quality(80)/filters:no_upscale()/articles/microservices-aggregates-events-cqrs-part-1-richardson/en/resources/figure6.jpg)
 
 Compensações:
+
 5) Se a autorização de pagamento falhar devido a créditos insuficientes, o agregado Pagamento publica um evento "PagamentoRejeitado". Este evento não corresponde a uma mudança de estado, mas representa uma tentativa fracassada que viola uma regra de negócios. O agregado Pedido consome esse evento e altera seu estado para CANCELADO_PAGAMENTO_REJEITADO.
 6) Se Estoque falhar devido a quantidades insuficientes, o agregado Estoque publica um evento "EstoqueRejeitado". Este evento não corresponde a uma mudança de estado, mas representa uma tentativa fracassada que viola uma regra de negócios. O agregado Pedido consome esse evento, remove itens sem estoque do pedido e atualiza seu estado para ATUALIZADO_ESTOQUE_INSUFICIENTE.
 7) Se Entrega falhar ao tentar submeter o envio por uma transportadora, o agregado Entrega publica um evento "EnvioeRejeitado". Este evento não corresponde a uma mudança de estado, mas representa uma tentativa fracassada que viola uma regra de negócios. O agregado Pedido consome esse evento e atualiza seu estado para PENDENTE_FALHA_ENVIO, o qual poderá ser tratado conforme definição da área de negócios.
