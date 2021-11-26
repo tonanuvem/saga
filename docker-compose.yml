@@ -15,6 +15,36 @@ services:
       - ./templates/:/opt/nifi/nifi-current/conf/templates/
     restart: always 
 
+  producer_pedido:
+    image: tonanuvem/kafka_producer:latest
+    container_name: producer
+    ports:
+    - "5001:5001"
+    restart: always
+    environment:
+      - "HOST=kafka"
+      - "PORTA=9092"
+      - "TOPICO=PEDIDO_CRIADO"
+      - "WEBHOOK=inserir"
+      - "CANAL=lab-testes"
+    depends_on:
+      - kafka
+
+  producer_falha:
+    image: tonanuvem/kafka_producer:latest
+    container_name: producer
+    ports:
+    - "6001:5001"
+    restart: always
+    environment:
+      - "HOST=kafka"
+      - "PORTA=9092"
+      - "TOPICO=CANCELAR_ENVIO_PEDIDO"
+      - "WEBHOOK=inserir"
+      - "CANAL=lab-testes"
+    depends_on:
+      - kafka
+      
   zookeeper:
     image: "confluentinc/cp-zookeeper"
     environment:
@@ -23,6 +53,7 @@ services:
       - "2181:2181"
     restart: always      
 
+  # usar no Nifi: PublishKafka_1_0
   kafka:
     image: "confluentinc/cp-kafka"
     environment:
