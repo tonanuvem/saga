@@ -11,7 +11,8 @@ services:
       - "8090:8080"
       - "8010:8010"
     volumes:
-      - ./templates/:/opt/nifi/conf/templates/
+      #- ./templates/:/opt/nifi/conf/templates/
+      - ./templates/:/opt/nifi/nifi-current/conf/templates/
     restart: always 
 
   zookeeper:
