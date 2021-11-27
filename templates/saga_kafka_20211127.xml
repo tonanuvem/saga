@@ -1,0 +1,5760 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.3">
+    <description></description>
+    <groupId>5f39b846-017d-1000-aca4-1cb014942525</groupId>
+    <name>saga_kafka_20211127</name>
+    <snippet>
+        <processGroups>
+            <id>d69d4745-0e10-3224-0000-000000000000</id>
+            <parentGroupId>f1ec1db9-46c0-3609-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <processGroups>
+                    <id>23411e9f-a35f-348e-0000-000000000000</id>
+                    <parentGroupId>d69d4745-0e10-3224-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1800.0</x>
+                        <y>936.0</y>
+                    </position>
+                    <comments></comments>
+                    <contents>
+                        <connections>
+                            <id>14be7b95-ce43-3db3-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>33a27a9e-4d9c-37e9-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Original</selectedRelationships>
+                            <selectedRelationships>Retry</selectedRelationships>
+                            <source>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>2c9f14b6-0d60-3144-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>1fc15511-91ec-3332-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>95c77656-25f9-3399-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Failure</selectedRelationships>
+                            <selectedRelationships>No Retry</selectedRelationships>
+                            <source>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>2c9f14b6-0d60-3144-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>2d4c7f8d-ebdf-3ced-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>3c0fad32-255b-3547-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>a2020a09-1b69-34fb-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>6903f82e-eb8f-337a-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>1d252f01-e44b-3f31-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>failure</selectedRelationships>
+                            <source>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>a2020a09-1b69-34fb-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>8541d0c3-1812-3d52-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>a2020a09-1b69-34fb-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Response</selectedRelationships>
+                            <source>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>2c9f14b6-0d60-3144-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>8887aff7-447e-35b1-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>574af8b6-6517-336f-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>3c0fad32-255b-3547-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>bc95ce3a-666e-3c67-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>2c9f14b6-0d60-3144-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>eb6c3683-c2b7-310c-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>dbca0205-acfe-30c8-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>44475f44-09dd-35a6-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>a2020a09-1b69-34fb-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>e341bcb0-ad14-31d0-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>060d8af0-70a6-3e0f-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>failure</selectedRelationships>
+                            <source>
+<groupId>23411e9f-a35f-348e-0000-000000000000</groupId>
+<id>3c0fad32-255b-3547-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <funnels>
+                            <id>060d8af0-70a6-3e0f-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <position>
+<x>2832.0</x>
+<y>1008.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>1d252f01-e44b-3f31-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <position>
+<x>2456.0</x>
+<y>872.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>33a27a9e-4d9c-37e9-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <position>
+<x>2448.0</x>
+<y>680.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>44475f44-09dd-35a6-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <position>
+<x>1753.4800292968748</x>
+<y>1063.4800292968748</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>574af8b6-6517-336f-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <position>
+<x>2832.0</x>
+<y>1112.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>95c77656-25f9-3399-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <position>
+<x>2448.0</x>
+<y>560.0</y>
+                            </position>
+                        </funnels>
+                        <processors>
+                            <id>2c9f14b6-0d60-3144-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <position>
+<x>1840.0</x>
+<y>592.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>HTTP Method</key>
+        <value>
+            <name>HTTP Method</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote URL</key>
+        <value>
+            <name>Remote URL</name>
+        </value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>SSL Context Service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Connection Timeout</key>
+        <value>
+            <name>Connection Timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Read Timeout</key>
+        <value>
+            <name>Read Timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>idle-timeout</key>
+        <value>
+            <name>idle-timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max-idle-connections</key>
+        <value>
+            <name>max-idle-connections</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Include Date Header</key>
+        <value>
+            <name>Include Date Header</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Follow Redirects</key>
+        <value>
+            <name>Follow Redirects</name>
+        </value>
+    </entry>
+    <entry>
+        <key>disable-http2</key>
+        <value>
+            <name>disable-http2</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Attributes to Send</key>
+        <value>
+            <name>Attributes to Send</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Useragent</key>
+        <value>
+            <name>Useragent</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Basic Authentication Username</key>
+        <value>
+            <name>Basic Authentication Username</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Basic Authentication Password</key>
+        <value>
+            <name>Basic Authentication Password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>proxy-configuration-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.proxy.ProxyConfigurationService</identifiesControllerService>
+            <name>proxy-configuration-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+        <value>
+            <name>Proxy Host</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Port</key>
+        <value>
+            <name>Proxy Port</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Type</key>
+        <value>
+            <name>Proxy Type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-user</key>
+        <value>
+            <name>invokehttp-proxy-user</name>
+        </value>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-password</key>
+        <value>
+            <name>invokehttp-proxy-password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Put Response Body In Attribute</key>
+        <value>
+            <name>Put Response Body In Attribute</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Max Length To Put In Attribute</key>
+        <value>
+            <name>Max Length To Put In Attribute</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Digest Authentication</key>
+        <value>
+            <name>Digest Authentication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Always Output Response</key>
+        <value>
+            <name>Always Output Response</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Add Response Headers to Request</key>
+        <value>
+            <name>Add Response Headers to Request</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Content-Type</key>
+        <value>
+            <name>Content-Type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>send-message-body</key>
+        <value>
+            <name>send-message-body</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Use Chunked Encoding</key>
+        <value>
+            <name>Use Chunked Encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Penalize on "No Retry"</key>
+        <value>
+            <name>Penalize on "No Retry"</name>
+        </value>
+    </entry>
+    <entry>
+        <key>use-etag</key>
+        <value>
+            <name>use-etag</name>
+        </value>
+    </entry>
+    <entry>
+        <key>etag-max-cache-size</key>
+        <value>
+            <name>etag-max-cache-size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ignore-response-content</key>
+        <value>
+            <name>ignore-response-content</name>
+        </value>
+    </entry>
+    <entry>
+        <key>form-body-form-name</key>
+        <value>
+            <name>form-body-form-name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>set-form-filename</key>
+        <value>
+            <name>set-form-filename</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>HTTP Method</key>
+        <value>POST</value>
+    </entry>
+    <entry>
+        <key>Remote URL</key>
+        <value>${endpoint_logistica}</value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+    </entry>
+    <entry>
+        <key>Connection Timeout</key>
+        <value>5 secs</value>
+    </entry>
+    <entry>
+        <key>Read Timeout</key>
+        <value>15 secs</value>
+    </entry>
+    <entry>
+        <key>idle-timeout</key>
+        <value>5 mins</value>
+    </entry>
+    <entry>
+        <key>max-idle-connections</key>
+        <value>5</value>
+    </entry>
+    <entry>
+        <key>Include Date Header</key>
+        <value>True</value>
+    </entry>
+    <entry>
+        <key>Follow Redirects</key>
+        <value>True</value>
+    </entry>
+    <entry>
+        <key>disable-http2</key>
+        <value>False</value>
+    </entry>
+    <entry>
+        <key>Attributes to Send</key>
+    </entry>
+    <entry>
+        <key>Useragent</key>
+    </entry>
+    <entry>
+        <key>Basic Authentication Username</key>
+    </entry>
+    <entry>
+        <key>Basic Authentication Password</key>
+    </entry>
+    <entry>
+        <key>proxy-configuration-service</key>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+    </entry>
+    <entry>
+        <key>Proxy Port</key>
+    </entry>
+    <entry>
+        <key>Proxy Type</key>
+        <value>http</value>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-user</key>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-password</key>
+    </entry>
+    <entry>
+        <key>Put Response Body In Attribute</key>
+    </entry>
+    <entry>
+        <key>Max Length To Put In Attribute</key>
+        <value>256</value>
+    </entry>
+    <entry>
+        <key>Digest Authentication</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Always Output Response</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Add Response Headers to Request</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Content-Type</key>
+        <value>${mime.type}</value>
+    </entry>
+    <entry>
+        <key>send-message-body</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>Use Chunked Encoding</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Penalize on "No Retry"</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>use-etag</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>etag-max-cache-size</key>
+        <value>10MB</value>
+    </entry>
+    <entry>
+        <key>ignore-response-content</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>form-body-form-name</key>
+    </entry>
+    <entry>
+        <key>set-form-filename</key>
+        <value>true</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Enviar pedido (InvokeHTTP)</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>No Retry</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Original</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Response</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Retry</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+                        </processors>
+                        <processors>
+                            <id>3c0fad32-255b-3547-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <position>
+<x>2192.0</x>
+<y>1032.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-kafka-2-0-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>
+            <name>bootstrap.servers</name>
+        </value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>
+            <name>security.protocol</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>
+            <name>sasl.mechanism</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+        <value>
+            <name>sasl.kerberos.service.name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+        <value>
+            <name>sasl.kerberos.principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+        <value>
+            <name>sasl.kerberos.keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+        <value>
+            <name>sasl.username</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+        <value>
+            <name>sasl.password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>
+            <name>sasl.token.auth</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl.context.service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>
+            <name>topic</name>
+        </value>
+    </entry>
+    <entry>
+        <key>acks</key>
+        <value>
+            <name>acks</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Failure Strategy</key>
+        <value>
+            <name>Failure Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>use-transactions</key>
+        <value>
+            <name>use-transactions</name>
+        </value>
+    </entry>
+    <entry>
+        <key>transactional-id-prefix</key>
+        <value>
+            <name>transactional-id-prefix</name>
+        </value>
+    </entry>
+    <entry>
+        <key>attribute-name-regex</key>
+        <value>
+            <name>attribute-name-regex</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>
+            <name>message-header-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kafka-key</key>
+        <value>
+            <name>kafka-key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>
+            <name>key-attribute-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+        <value>
+            <name>message-demarcator</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.request.size</key>
+        <value>
+            <name>max.request.size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ack.wait.time</key>
+        <value>
+            <name>ack.wait.time</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.block.ms</key>
+        <value>
+            <name>max.block.ms</name>
+        </value>
+    </entry>
+    <entry>
+        <key>partitioner.class</key>
+        <value>
+            <name>partitioner.class</name>
+        </value>
+    </entry>
+    <entry>
+        <key>partition</key>
+        <value>
+            <name>partition</name>
+        </value>
+    </entry>
+    <entry>
+        <key>compression.type</key>
+        <value>
+            <name>compression.type</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>${kafkabroker}</value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>PLAINTEXT</value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>GSSAPI</value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>${kafka_topic_pedido_enviado}</value>
+    </entry>
+    <entry>
+        <key>acks</key>
+        <value>all</value>
+    </entry>
+    <entry>
+        <key>Failure Strategy</key>
+        <value>Route to Failure</value>
+    </entry>
+    <entry>
+        <key>use-transactions</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>transactional-id-prefix</key>
+    </entry>
+    <entry>
+        <key>attribute-name-regex</key>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>kafka-key</key>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>utf-8</value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+    </entry>
+    <entry>
+        <key>max.request.size</key>
+        <value>1 MB</value>
+    </entry>
+    <entry>
+        <key>ack.wait.time</key>
+        <value>5 secs</value>
+    </entry>
+    <entry>
+        <key>max.block.ms</key>
+        <value>5 sec</value>
+    </entry>
+    <entry>
+        <key>partitioner.class</key>
+        <value>org.apache.kafka.clients.producer.internals.DefaultPartitioner</value>
+    </entry>
+    <entry>
+        <key>partition</key>
+    </entry>
+    <entry>
+        <key>compression.type</key>
+        <value>none</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>PublishKafka_2_0</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.kafka.pubsub.PublishKafka_2_0</type>
+                        </processors>
+                        <processors>
+                            <id>a2020a09-1b69-34fb-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <position>
+<x>1848.0</x>
+<y>832.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-mongodb-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>mongo-client-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.mongodb.MongoDBClientService</identifiesControllerService>
+            <name>mongo-client-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mongo URI</key>
+        <value>
+            <name>Mongo URI</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mongo Database Name</key>
+        <value>
+            <name>Mongo Database Name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mongo Collection Name</key>
+        <value>
+            <name>Mongo Collection Name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl-context-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl-context-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl-client-auth</key>
+        <value>
+            <name>ssl-client-auth</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mode</key>
+        <value>
+            <name>Mode</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Upsert</key>
+        <value>
+            <name>Upsert</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Update Query Key</key>
+        <value>
+            <name>Update Query Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>putmongo-update-query</key>
+        <value>
+            <name>putmongo-update-query</name>
+        </value>
+    </entry>
+    <entry>
+        <key>put-mongo-update-mode</key>
+        <value>
+            <name>put-mongo-update-mode</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Write Concern</key>
+        <value>
+            <name>Write Concern</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Character Set</key>
+        <value>
+            <name>Character Set</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>mongo-client-service</key>
+    </entry>
+    <entry>
+        <key>Mongo URI</key>
+        <value>${logisticamongouri}</value>
+    </entry>
+    <entry>
+        <key>Mongo Database Name</key>
+        <value>${logisticadb}</value>
+    </entry>
+    <entry>
+        <key>Mongo Collection Name</key>
+        <value>${logisticacollection}</value>
+    </entry>
+    <entry>
+        <key>ssl-context-service</key>
+    </entry>
+    <entry>
+        <key>ssl-client-auth</key>
+        <value>REQUIRED</value>
+    </entry>
+    <entry>
+        <key>Mode</key>
+        <value>insert</value>
+    </entry>
+    <entry>
+        <key>Upsert</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Update Query Key</key>
+    </entry>
+    <entry>
+        <key>putmongo-update-query</key>
+    </entry>
+    <entry>
+        <key>put-mongo-update-mode</key>
+        <value>doc</value>
+    </entry>
+    <entry>
+        <key>Write Concern</key>
+        <value>ACKNOWLEDGED</value>
+    </entry>
+    <entry>
+        <key>Character Set</key>
+        <value>UTF-8</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>PutMongo</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.mongodb.PutMongo</type>
+                        </processors>
+                        <processors>
+                            <id>eb6c3683-c2b7-310c-0000-000000000000</id>
+                            <parentGroupId>23411e9f-a35f-348e-0000-000000000000</parentGroupId>
+                            <position>
+<x>1848.0</x>
+<y>392.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-kafka-2-0-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>
+            <name>bootstrap.servers</name>
+        </value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>
+            <name>security.protocol</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>
+            <name>sasl.mechanism</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+        <value>
+            <name>sasl.kerberos.service.name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+        <value>
+            <name>sasl.kerberos.principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+        <value>
+            <name>sasl.kerberos.keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+        <value>
+            <name>sasl.username</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+        <value>
+            <name>sasl.password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>
+            <name>sasl.token.auth</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl.context.service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>
+            <name>topic</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic_type</key>
+        <value>
+            <name>topic_type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>honor-transactions</key>
+        <value>
+            <name>honor-transactions</name>
+        </value>
+    </entry>
+    <entry>
+        <key>group.id</key>
+        <value>
+            <name>group.id</name>
+        </value>
+    </entry>
+    <entry>
+        <key>auto.offset.reset</key>
+        <value>
+            <name>auto.offset.reset</name>
+        </value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>
+            <name>key-attribute-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+        <value>
+            <name>message-demarcator</name>
+        </value>
+    </entry>
+    <entry>
+        <key>separate-by-key</key>
+        <value>
+            <name>separate-by-key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>
+            <name>message-header-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>header-name-regex</key>
+        <value>
+            <name>header-name-regex</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.poll.records</key>
+        <value>
+            <name>max.poll.records</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max-uncommit-offset-wait</key>
+        <value>
+            <name>max-uncommit-offset-wait</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>
+            <name>Communications Timeout</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>${kafkabroker}</value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>PLAINTEXT</value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>GSSAPI</value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>${kafka_topic_estoque_atualizado}</value>
+    </entry>
+    <entry>
+        <key>topic_type</key>
+        <value>names</value>
+    </entry>
+    <entry>
+        <key>honor-transactions</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>group.id</key>
+        <value>22</value>
+    </entry>
+    <entry>
+        <key>auto.offset.reset</key>
+        <value>latest</value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>utf-8</value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+    </entry>
+    <entry>
+        <key>separate-by-key</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>header-name-regex</key>
+    </entry>
+    <entry>
+        <key>max.poll.records</key>
+        <value>10000</value>
+    </entry>
+    <entry>
+        <key>max-uncommit-offset-wait</key>
+        <value>1 secs</value>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>60 secs</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>ConsumeKafka_2_0</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.kafka.pubsub.ConsumeKafka_2_0</type>
+                        </processors>
+                    </contents>
+                    <defaultBackPressureDataSizeThreshold>1 GB</defaultBackPressureDataSizeThreshold>
+                    <defaultBackPressureObjectThreshold>10000</defaultBackPressureObjectThreshold>
+                    <defaultFlowFileExpiration>0 sec</defaultFlowFileExpiration>
+                    <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+                    <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+                    <name>Enviar pedido</name>
+                    <variables>
+                        <entry>
+                            <key>endpoint_logistica</key>
+                            <value>http://mockbin.org/bin/cfef3ff6-6e78-40cf-8fb6-3fa59c4dcae2/</value>
+                        </entry>
+                    </variables>
+                </processGroups>
+                <processGroups>
+                    <id>2de04c42-010e-3f55-0000-000000000000</id>
+                    <parentGroupId>d69d4745-0e10-3224-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1464.0</x>
+                        <y>664.0</y>
+                    </position>
+                    <comments></comments>
+                    <contents>
+                        <connections>
+                            <id>4fbf059b-e782-3bc5-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>29063ee3-4732-37cb-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Response</selectedRelationships>
+                            <source>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>40834deb-c6d9-3ab5-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>9428404f-cdbc-3c93-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>37ab0365-45ed-3b0a-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>b06a20fe-ade7-3d08-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>99731092-4a88-3747-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>7ad3dc41-194f-3efd-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Failure</selectedRelationships>
+                            <selectedRelationships>No Retry</selectedRelationships>
+                            <source>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>40834deb-c6d9-3ab5-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>9cb66f76-2366-339f-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>0446c85c-a57c-3b56-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Original</selectedRelationships>
+                            <selectedRelationships>Retry</selectedRelationships>
+                            <source>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>40834deb-c6d9-3ab5-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>a619ffc1-5493-3ab2-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>5425e6cb-9f1d-3134-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>failure</selectedRelationships>
+                            <source>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>b06a20fe-ade7-3d08-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>bf50b01b-4f41-3086-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>b06a20fe-ade7-3d08-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Response</selectedRelationships>
+                            <source>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>40834deb-c6d9-3ab5-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>cb1b438d-acb2-33b3-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>40834deb-c6d9-3ab5-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>2de04c42-010e-3f55-0000-000000000000</groupId>
+<id>d1941523-c4c3-30d0-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <funnels>
+                            <id>0446c85c-a57c-3b56-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <position>
+<x>2000.0</x>
+<y>568.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>29063ee3-4732-37cb-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <position>
+<x>1272.0</x>
+<y>720.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>37ab0365-45ed-3b0a-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <position>
+<x>2224.0</x>
+<y>824.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>5425e6cb-9f1d-3134-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <position>
+<x>2216.0</x>
+<y>688.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>7ad3dc41-194f-3efd-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <position>
+<x>2008.0</x>
+<y>440.0</y>
+                            </position>
+                        </funnels>
+                        <processors>
+                            <id>40834deb-c6d9-3ab5-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <position>
+<x>1344.0</x>
+<y>440.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>HTTP Method</key>
+        <value>
+            <name>HTTP Method</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote URL</key>
+        <value>
+            <name>Remote URL</name>
+        </value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>SSL Context Service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Connection Timeout</key>
+        <value>
+            <name>Connection Timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Read Timeout</key>
+        <value>
+            <name>Read Timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>idle-timeout</key>
+        <value>
+            <name>idle-timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max-idle-connections</key>
+        <value>
+            <name>max-idle-connections</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Include Date Header</key>
+        <value>
+            <name>Include Date Header</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Follow Redirects</key>
+        <value>
+            <name>Follow Redirects</name>
+        </value>
+    </entry>
+    <entry>
+        <key>disable-http2</key>
+        <value>
+            <name>disable-http2</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Attributes to Send</key>
+        <value>
+            <name>Attributes to Send</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Useragent</key>
+        <value>
+            <name>Useragent</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Basic Authentication Username</key>
+        <value>
+            <name>Basic Authentication Username</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Basic Authentication Password</key>
+        <value>
+            <name>Basic Authentication Password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>proxy-configuration-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.proxy.ProxyConfigurationService</identifiesControllerService>
+            <name>proxy-configuration-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+        <value>
+            <name>Proxy Host</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Port</key>
+        <value>
+            <name>Proxy Port</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Type</key>
+        <value>
+            <name>Proxy Type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-user</key>
+        <value>
+            <name>invokehttp-proxy-user</name>
+        </value>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-password</key>
+        <value>
+            <name>invokehttp-proxy-password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Put Response Body In Attribute</key>
+        <value>
+            <name>Put Response Body In Attribute</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Max Length To Put In Attribute</key>
+        <value>
+            <name>Max Length To Put In Attribute</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Digest Authentication</key>
+        <value>
+            <name>Digest Authentication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Always Output Response</key>
+        <value>
+            <name>Always Output Response</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Add Response Headers to Request</key>
+        <value>
+            <name>Add Response Headers to Request</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Content-Type</key>
+        <value>
+            <name>Content-Type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>send-message-body</key>
+        <value>
+            <name>send-message-body</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Use Chunked Encoding</key>
+        <value>
+            <name>Use Chunked Encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Penalize on "No Retry"</key>
+        <value>
+            <name>Penalize on "No Retry"</name>
+        </value>
+    </entry>
+    <entry>
+        <key>use-etag</key>
+        <value>
+            <name>use-etag</name>
+        </value>
+    </entry>
+    <entry>
+        <key>etag-max-cache-size</key>
+        <value>
+            <name>etag-max-cache-size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ignore-response-content</key>
+        <value>
+            <name>ignore-response-content</name>
+        </value>
+    </entry>
+    <entry>
+        <key>form-body-form-name</key>
+        <value>
+            <name>form-body-form-name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>set-form-filename</key>
+        <value>
+            <name>set-form-filename</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>HTTP Method</key>
+        <value>PATCH</value>
+    </entry>
+    <entry>
+        <key>Remote URL</key>
+        <value>${endpoint_estoque}</value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+    </entry>
+    <entry>
+        <key>Connection Timeout</key>
+        <value>5 secs</value>
+    </entry>
+    <entry>
+        <key>Read Timeout</key>
+        <value>15 secs</value>
+    </entry>
+    <entry>
+        <key>idle-timeout</key>
+        <value>5 mins</value>
+    </entry>
+    <entry>
+        <key>max-idle-connections</key>
+        <value>5</value>
+    </entry>
+    <entry>
+        <key>Include Date Header</key>
+        <value>True</value>
+    </entry>
+    <entry>
+        <key>Follow Redirects</key>
+        <value>True</value>
+    </entry>
+    <entry>
+        <key>disable-http2</key>
+        <value>False</value>
+    </entry>
+    <entry>
+        <key>Attributes to Send</key>
+    </entry>
+    <entry>
+        <key>Useragent</key>
+    </entry>
+    <entry>
+        <key>Basic Authentication Username</key>
+    </entry>
+    <entry>
+        <key>Basic Authentication Password</key>
+    </entry>
+    <entry>
+        <key>proxy-configuration-service</key>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+    </entry>
+    <entry>
+        <key>Proxy Port</key>
+    </entry>
+    <entry>
+        <key>Proxy Type</key>
+        <value>http</value>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-user</key>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-password</key>
+    </entry>
+    <entry>
+        <key>Put Response Body In Attribute</key>
+    </entry>
+    <entry>
+        <key>Max Length To Put In Attribute</key>
+        <value>256</value>
+    </entry>
+    <entry>
+        <key>Digest Authentication</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Always Output Response</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Add Response Headers to Request</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Content-Type</key>
+        <value>${mime.type}</value>
+    </entry>
+    <entry>
+        <key>send-message-body</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>Use Chunked Encoding</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Penalize on "No Retry"</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>use-etag</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>etag-max-cache-size</key>
+        <value>10MB</value>
+    </entry>
+    <entry>
+        <key>ignore-response-content</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>form-body-form-name</key>
+    </entry>
+    <entry>
+        <key>set-form-filename</key>
+        <value>true</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Atualizar estoque (InvokeHTTP)</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>No Retry</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Original</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Response</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Retry</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+                        </processors>
+                        <processors>
+                            <id>b06a20fe-ade7-3d08-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <position>
+<x>1568.0</x>
+<y>720.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-kafka-2-0-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>
+            <name>bootstrap.servers</name>
+        </value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>
+            <name>security.protocol</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>
+            <name>sasl.mechanism</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+        <value>
+            <name>sasl.kerberos.service.name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+        <value>
+            <name>sasl.kerberos.principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+        <value>
+            <name>sasl.kerberos.keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+        <value>
+            <name>sasl.username</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+        <value>
+            <name>sasl.password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>
+            <name>sasl.token.auth</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl.context.service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>
+            <name>topic</name>
+        </value>
+    </entry>
+    <entry>
+        <key>acks</key>
+        <value>
+            <name>acks</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Failure Strategy</key>
+        <value>
+            <name>Failure Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>use-transactions</key>
+        <value>
+            <name>use-transactions</name>
+        </value>
+    </entry>
+    <entry>
+        <key>transactional-id-prefix</key>
+        <value>
+            <name>transactional-id-prefix</name>
+        </value>
+    </entry>
+    <entry>
+        <key>attribute-name-regex</key>
+        <value>
+            <name>attribute-name-regex</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>
+            <name>message-header-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kafka-key</key>
+        <value>
+            <name>kafka-key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>
+            <name>key-attribute-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+        <value>
+            <name>message-demarcator</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.request.size</key>
+        <value>
+            <name>max.request.size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ack.wait.time</key>
+        <value>
+            <name>ack.wait.time</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.block.ms</key>
+        <value>
+            <name>max.block.ms</name>
+        </value>
+    </entry>
+    <entry>
+        <key>partitioner.class</key>
+        <value>
+            <name>partitioner.class</name>
+        </value>
+    </entry>
+    <entry>
+        <key>partition</key>
+        <value>
+            <name>partition</name>
+        </value>
+    </entry>
+    <entry>
+        <key>compression.type</key>
+        <value>
+            <name>compression.type</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>${kafkabroker}</value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>PLAINTEXT</value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>GSSAPI</value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>${kafka_topic_estoque_atualizado}</value>
+    </entry>
+    <entry>
+        <key>acks</key>
+        <value>all</value>
+    </entry>
+    <entry>
+        <key>Failure Strategy</key>
+        <value>Route to Failure</value>
+    </entry>
+    <entry>
+        <key>use-transactions</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>transactional-id-prefix</key>
+    </entry>
+    <entry>
+        <key>attribute-name-regex</key>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>kafka-key</key>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>utf-8</value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+    </entry>
+    <entry>
+        <key>max.request.size</key>
+        <value>1 MB</value>
+    </entry>
+    <entry>
+        <key>ack.wait.time</key>
+        <value>5 secs</value>
+    </entry>
+    <entry>
+        <key>max.block.ms</key>
+        <value>5 sec</value>
+    </entry>
+    <entry>
+        <key>partitioner.class</key>
+        <value>org.apache.kafka.clients.producer.internals.DefaultPartitioner</value>
+    </entry>
+    <entry>
+        <key>partition</key>
+    </entry>
+    <entry>
+        <key>compression.type</key>
+        <value>none</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>PublishKafka_2_0</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.kafka.pubsub.PublishKafka_2_0</type>
+                        </processors>
+                        <processors>
+                            <id>d1941523-c4c3-30d0-0000-000000000000</id>
+                            <parentGroupId>2de04c42-010e-3f55-0000-000000000000</parentGroupId>
+                            <position>
+<x>1344.0</x>
+<y>176.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-kafka-2-0-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>
+            <name>bootstrap.servers</name>
+        </value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>
+            <name>security.protocol</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>
+            <name>sasl.mechanism</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+        <value>
+            <name>sasl.kerberos.service.name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+        <value>
+            <name>sasl.kerberos.principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+        <value>
+            <name>sasl.kerberos.keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+        <value>
+            <name>sasl.username</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+        <value>
+            <name>sasl.password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>
+            <name>sasl.token.auth</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl.context.service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>
+            <name>topic</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic_type</key>
+        <value>
+            <name>topic_type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>honor-transactions</key>
+        <value>
+            <name>honor-transactions</name>
+        </value>
+    </entry>
+    <entry>
+        <key>group.id</key>
+        <value>
+            <name>group.id</name>
+        </value>
+    </entry>
+    <entry>
+        <key>auto.offset.reset</key>
+        <value>
+            <name>auto.offset.reset</name>
+        </value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>
+            <name>key-attribute-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+        <value>
+            <name>message-demarcator</name>
+        </value>
+    </entry>
+    <entry>
+        <key>separate-by-key</key>
+        <value>
+            <name>separate-by-key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>
+            <name>message-header-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>header-name-regex</key>
+        <value>
+            <name>header-name-regex</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.poll.records</key>
+        <value>
+            <name>max.poll.records</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max-uncommit-offset-wait</key>
+        <value>
+            <name>max-uncommit-offset-wait</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>
+            <name>Communications Timeout</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>${kafkabroker}</value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>PLAINTEXT</value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>GSSAPI</value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>${kafka_topic_pagamento_sucesso}</value>
+    </entry>
+    <entry>
+        <key>topic_type</key>
+        <value>names</value>
+    </entry>
+    <entry>
+        <key>honor-transactions</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>group.id</key>
+        <value>21</value>
+    </entry>
+    <entry>
+        <key>auto.offset.reset</key>
+        <value>latest</value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>utf-8</value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+    </entry>
+    <entry>
+        <key>separate-by-key</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>header-name-regex</key>
+    </entry>
+    <entry>
+        <key>max.poll.records</key>
+        <value>10000</value>
+    </entry>
+    <entry>
+        <key>max-uncommit-offset-wait</key>
+        <value>1 secs</value>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>60 secs</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>ConsumeKafka_2_0</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.kafka.pubsub.ConsumeKafka_2_0</type>
+                        </processors>
+                    </contents>
+                    <defaultBackPressureDataSizeThreshold>1 GB</defaultBackPressureDataSizeThreshold>
+                    <defaultBackPressureObjectThreshold>10000</defaultBackPressureObjectThreshold>
+                    <defaultFlowFileExpiration>0 sec</defaultFlowFileExpiration>
+                    <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+                    <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+                    <name>Atualizar Estoque do Produto</name>
+                    <variables>
+                        <entry>
+                            <key>endpoint_estoque</key>
+                            <value>http://mockbin.org/bin/a5539d8e-b345-40e9-9c46-f4125e8266f2?foo=bar&amp;foo=baz</value>
+                        </entry>
+                    </variables>
+                </processGroups>
+                <processGroups>
+                    <id>6e15a08b-c8b6-3434-0000-000000000000</id>
+                    <parentGroupId>d69d4745-0e10-3224-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>960.0</x>
+                        <y>112.0</y>
+                    </position>
+                    <comments></comments>
+                    <contents>
+                        <connections>
+                            <id>48bf02bb-61de-31de-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>86862bac-399b-3264-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>9364b878-3470-3af4-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>5b1abe14-46de-3579-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>6cffda1c-0f0c-3b79-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>4447de68-70c7-35c0-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>5b4430da-2613-3356-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>9364b878-3470-3af4-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>matched</selectedRelationships>
+                            <source>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>6cffda1c-0f0c-3b79-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>74dfa643-02d4-3cf7-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>b0b55440-c4e6-379f-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>86862bac-399b-3264-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>8f8366c3-faee-3524-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>eda771ea-aa44-3f8f-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>failure</selectedRelationships>
+                            <source>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>9364b878-3470-3af4-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>97ce5e4d-f4c2-35aa-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>213259af-2ba2-3209-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>failure</selectedRelationships>
+                            <selectedRelationships>unmatched</selectedRelationships>
+                            <source>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>6cffda1c-0f0c-3b79-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>a0075aab-e982-3a51-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>6cffda1c-0f0c-3b79-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>80aaba97-b187-37da-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>bdc6fad7-a043-371c-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>6cffda1c-0f0c-3b79-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>4128928c-f49c-3729-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>d0a094f2-1d74-3130-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>86a4a3ba-6d17-350e-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>failure</selectedRelationships>
+                            <source>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>86862bac-399b-3264-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>d15803dc-97ea-34a9-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>880dcd5d-ef25-3482-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>6e15a08b-c8b6-3434-0000-000000000000</groupId>
+<id>9364b878-3470-3af4-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <funnels>
+                            <id>213259af-2ba2-3209-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>1088.0</x>
+<y>296.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>86a4a3ba-6d17-350e-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>1360.0</x>
+<y>736.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>880dcd5d-ef25-3482-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>320.0</x>
+<y>768.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>b0b55440-c4e6-379f-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>1360.0</x>
+<y>832.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>eda771ea-aa44-3f8f-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>1096.0</x>
+<y>568.0</y>
+                            </position>
+                        </funnels>
+                        <processors>
+                            <id>4128928c-f49c-3729-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>392.0</x>
+<y>56.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-kafka-1-0-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>
+            <name>bootstrap.servers</name>
+        </value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>
+            <name>security.protocol</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+        <value>
+            <name>sasl.kerberos.service.name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+        <value>
+            <name>sasl.kerberos.principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+        <value>
+            <name>sasl.kerberos.keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl.context.service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>
+            <name>topic</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic_type</key>
+        <value>
+            <name>topic_type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>honor-transactions</key>
+        <value>
+            <name>honor-transactions</name>
+        </value>
+    </entry>
+    <entry>
+        <key>group.id</key>
+        <value>
+            <name>group.id</name>
+        </value>
+    </entry>
+    <entry>
+        <key>auto.offset.reset</key>
+        <value>
+            <name>auto.offset.reset</name>
+        </value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>
+            <name>key-attribute-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+        <value>
+            <name>message-demarcator</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>
+            <name>message-header-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>header-name-regex</key>
+        <value>
+            <name>header-name-regex</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.poll.records</key>
+        <value>
+            <name>max.poll.records</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max-uncommit-offset-wait</key>
+        <value>
+            <name>max-uncommit-offset-wait</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>${kafkabroker}</value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>PLAINTEXT</value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>${kafka_topic_pedido_novo}</value>
+    </entry>
+    <entry>
+        <key>topic_type</key>
+        <value>names</value>
+    </entry>
+    <entry>
+        <key>honor-transactions</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>group.id</key>
+        <value>${groupid_kafka_NIFI_MICROSERVICE_PEDIDO}</value>
+    </entry>
+    <entry>
+        <key>auto.offset.reset</key>
+        <value>latest</value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>utf-8</value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>header-name-regex</key>
+    </entry>
+    <entry>
+        <key>max.poll.records</key>
+        <value>10000</value>
+    </entry>
+    <entry>
+        <key>max-uncommit-offset-wait</key>
+        <value>1 secs</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>ConsumeKafka_1_0</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.kafka.pubsub.ConsumeKafka_1_0</type>
+                        </processors>
+                        <processors>
+                            <id>4447de68-70c7-35c0-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>-96.0</x>
+<y>56.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>File Size</key>
+        <value>
+            <name>File Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Batch Size</key>
+        <value>
+            <name>Batch Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Data Format</key>
+        <value>
+            <name>Data Format</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Unique FlowFiles</key>
+        <value>
+            <name>Unique FlowFiles</name>
+        </value>
+    </entry>
+    <entry>
+        <key>generate-ff-custom-text</key>
+        <value>
+            <name>generate-ff-custom-text</name>
+        </value>
+    </entry>
+    <entry>
+        <key>character-set</key>
+        <value>
+            <name>character-set</name>
+        </value>
+    </entry>
+    <entry>
+        <key>mime-type</key>
+        <value>
+            <name>mime-type</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>File Size</key>
+        <value>0B</value>
+    </entry>
+    <entry>
+        <key>Batch Size</key>
+        <value>1</value>
+    </entry>
+    <entry>
+        <key>Data Format</key>
+        <value>Text</value>
+    </entry>
+    <entry>
+        <key>Unique FlowFiles</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>generate-ff-custom-text</key>
+        <value>{
+   "ordered_by":{
+      "user":"user_id"
+   },
+   "order_data":{
+      "order_id":"1234512345",
+      "order_amount":100,
+      "items":[
+         {
+            "prodItemId":"product_id",
+            "quantity":"1"
+         },
+         {
+            "prodItemId":"product_id",
+            "quantity":"1"
+         }
+      ],
+      "payment":[
+         {
+            "payment_method":"credit_card",
+            "card":{
+               "first_six_digits":"400000",
+               "last_four_digits":"0010",
+               "brand":"Visa",
+               "holder_name":"Tony Stark",
+               "exp_month":1,
+               "exp_year":2020
+            }
+         }
+      ]
+   }
+}
+</value>
+    </entry>
+    <entry>
+        <key>character-set</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>mime-type</key>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>30 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>GenerateFlowFile</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                        </processors>
+                        <processors>
+                            <id>6cffda1c-0f0c-3b79-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>368.0</x>
+<y>264.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Destination</key>
+        <value>
+            <name>Destination</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Return Type</key>
+        <value>
+            <name>Return Type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Path Not Found Behavior</key>
+        <value>
+            <name>Path Not Found Behavior</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Null Value Representation</key>
+        <value>
+            <name>Null Value Representation</name>
+        </value>
+    </entry>
+    <entry>
+        <key>order_data</key>
+        <value>
+            <name>order_data</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Destination</key>
+        <value>flowfile-content</value>
+    </entry>
+    <entry>
+        <key>Return Type</key>
+        <value>auto-detect</value>
+    </entry>
+    <entry>
+        <key>Path Not Found Behavior</key>
+        <value>ignore</value>
+    </entry>
+    <entry>
+        <key>Null Value Representation</key>
+        <value>empty string</value>
+    </entry>
+    <entry>
+        <key>order_data</key>
+        <value>$</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>EvaluateJsonPath</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>matched</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>unmatched</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
+                        </processors>
+                        <processors>
+                            <id>80aaba97-b187-37da-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>896.0</x>
+<y>56.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Base Path</key>
+        <value>
+            <name>Base Path</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Listening Port</key>
+        <value>
+            <name>Listening Port</name>
+        </value>
+    </entry>
+    <entry>
+        <key>health-check-port</key>
+        <value>
+            <name>health-check-port</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Max Data to Receive per Second</key>
+        <value>
+            <name>Max Data to Receive per Second</name>
+        </value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.RestrictedSSLContextService</identifiesControllerService>
+            <name>SSL Context Service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>client-authentication</key>
+        <value>
+            <dependencies>
+                <propertyName>SSL Context Service</propertyName>
+            </dependencies>
+            <name>client-authentication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Authorized DN Pattern</key>
+        <value>
+            <name>Authorized DN Pattern</name>
+        </value>
+    </entry>
+    <entry>
+        <key>authorized-issuer-dn-pattern</key>
+        <value>
+            <name>authorized-issuer-dn-pattern</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Max Unconfirmed Flowfile Time</key>
+        <value>
+            <name>Max Unconfirmed Flowfile Time</name>
+        </value>
+    </entry>
+    <entry>
+        <key>HTTP Headers to receive as Attributes (Regex)</key>
+        <value>
+            <name>HTTP Headers to receive as Attributes (Regex)</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Return Code</key>
+        <value>
+            <name>Return Code</name>
+        </value>
+    </entry>
+    <entry>
+        <key>multipart-request-max-size</key>
+        <value>
+            <name>multipart-request-max-size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>multipart-read-buffer-size</key>
+        <value>
+            <name>multipart-read-buffer-size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max-thread-pool-size</key>
+        <value>
+            <name>max-thread-pool-size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>record-reader</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
+            <name>record-reader</name>
+        </value>
+    </entry>
+    <entry>
+        <key>record-writer</key>
+        <value>
+            <dependencies>
+                <propertyName>record-reader</propertyName>
+            </dependencies>
+            <identifiesControllerService>org.apache.nifi.serialization.RecordSetWriterFactory</identifiesControllerService>
+            <name>record-writer</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Base Path</key>
+        <value>contentListener</value>
+    </entry>
+    <entry>
+        <key>Listening Port</key>
+        <value>8010</value>
+    </entry>
+    <entry>
+        <key>health-check-port</key>
+    </entry>
+    <entry>
+        <key>Max Data to Receive per Second</key>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+    </entry>
+    <entry>
+        <key>client-authentication</key>
+        <value>AUTO</value>
+    </entry>
+    <entry>
+        <key>Authorized DN Pattern</key>
+        <value>.*</value>
+    </entry>
+    <entry>
+        <key>authorized-issuer-dn-pattern</key>
+        <value>.*</value>
+    </entry>
+    <entry>
+        <key>Max Unconfirmed Flowfile Time</key>
+        <value>60 secs</value>
+    </entry>
+    <entry>
+        <key>HTTP Headers to receive as Attributes (Regex)</key>
+    </entry>
+    <entry>
+        <key>Return Code</key>
+        <value>200</value>
+    </entry>
+    <entry>
+        <key>multipart-request-max-size</key>
+        <value>1 MB</value>
+    </entry>
+    <entry>
+        <key>multipart-read-buffer-size</key>
+        <value>512 KB</value>
+    </entry>
+    <entry>
+        <key>max-thread-pool-size</key>
+        <value>200</value>
+    </entry>
+    <entry>
+        <key>record-reader</key>
+    </entry>
+    <entry>
+        <key>record-writer</key>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Receber pedido (ListenHTTP)</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.ListenHTTP</type>
+                        </processors>
+                        <processors>
+                            <id>86862bac-399b-3264-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>680.0</x>
+<y>744.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-kafka-1-0-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>
+            <name>bootstrap.servers</name>
+        </value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>
+            <name>security.protocol</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+        <value>
+            <name>sasl.kerberos.service.name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+        <value>
+            <name>sasl.kerberos.principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+        <value>
+            <name>sasl.kerberos.keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl.context.service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>
+            <name>topic</name>
+        </value>
+    </entry>
+    <entry>
+        <key>acks</key>
+        <value>
+            <name>acks</name>
+        </value>
+    </entry>
+    <entry>
+        <key>use-transactions</key>
+        <value>
+            <name>use-transactions</name>
+        </value>
+    </entry>
+    <entry>
+        <key>transactional-id-prefix</key>
+        <value>
+            <name>transactional-id-prefix</name>
+        </value>
+    </entry>
+    <entry>
+        <key>attribute-name-regex</key>
+        <value>
+            <name>attribute-name-regex</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>
+            <name>message-header-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kafka-key</key>
+        <value>
+            <name>kafka-key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>
+            <name>key-attribute-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+        <value>
+            <name>message-demarcator</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.request.size</key>
+        <value>
+            <name>max.request.size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ack.wait.time</key>
+        <value>
+            <name>ack.wait.time</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.block.ms</key>
+        <value>
+            <name>max.block.ms</name>
+        </value>
+    </entry>
+    <entry>
+        <key>partitioner.class</key>
+        <value>
+            <name>partitioner.class</name>
+        </value>
+    </entry>
+    <entry>
+        <key>partition</key>
+        <value>
+            <name>partition</name>
+        </value>
+    </entry>
+    <entry>
+        <key>compression.type</key>
+        <value>
+            <name>compression.type</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>${kafkabroker}</value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>PLAINTEXT</value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>${kafka_topic_pedido_criado}</value>
+    </entry>
+    <entry>
+        <key>acks</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>use-transactions</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>transactional-id-prefix</key>
+    </entry>
+    <entry>
+        <key>attribute-name-regex</key>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>kafka-key</key>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>utf-8</value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+    </entry>
+    <entry>
+        <key>max.request.size</key>
+        <value>1 MB</value>
+    </entry>
+    <entry>
+        <key>ack.wait.time</key>
+        <value>5 secs</value>
+    </entry>
+    <entry>
+        <key>max.block.ms</key>
+        <value>5 sec</value>
+    </entry>
+    <entry>
+        <key>partitioner.class</key>
+        <value>org.apache.kafka.clients.producer.internals.DefaultPartitioner</value>
+    </entry>
+    <entry>
+        <key>partition</key>
+    </entry>
+    <entry>
+        <key>compression.type</key>
+        <value>none</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>PublishKafka_1_0</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.kafka.pubsub.PublishKafka_1_0</type>
+                        </processors>
+                        <processors>
+                            <id>9364b878-3470-3af4-0000-000000000000</id>
+                            <parentGroupId>6e15a08b-c8b6-3434-0000-000000000000</parentGroupId>
+                            <position>
+<x>368.0</x>
+<y>536.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-mongodb-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>mongo-client-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.mongodb.MongoDBClientService</identifiesControllerService>
+            <name>mongo-client-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mongo URI</key>
+        <value>
+            <name>Mongo URI</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mongo Database Name</key>
+        <value>
+            <name>Mongo Database Name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mongo Collection Name</key>
+        <value>
+            <name>Mongo Collection Name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl-context-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl-context-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl-client-auth</key>
+        <value>
+            <name>ssl-client-auth</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mode</key>
+        <value>
+            <name>Mode</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Upsert</key>
+        <value>
+            <name>Upsert</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Update Query Key</key>
+        <value>
+            <name>Update Query Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>putmongo-update-query</key>
+        <value>
+            <name>putmongo-update-query</name>
+        </value>
+    </entry>
+    <entry>
+        <key>put-mongo-update-mode</key>
+        <value>
+            <name>put-mongo-update-mode</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Write Concern</key>
+        <value>
+            <name>Write Concern</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Character Set</key>
+        <value>
+            <name>Character Set</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>mongo-client-service</key>
+    </entry>
+    <entry>
+        <key>Mongo URI</key>
+        <value>${pedidomongouri}</value>
+    </entry>
+    <entry>
+        <key>Mongo Database Name</key>
+        <value>${pedidodb}</value>
+    </entry>
+    <entry>
+        <key>Mongo Collection Name</key>
+        <value>${pedidocollection}</value>
+    </entry>
+    <entry>
+        <key>ssl-context-service</key>
+    </entry>
+    <entry>
+        <key>ssl-client-auth</key>
+        <value>REQUIRED</value>
+    </entry>
+    <entry>
+        <key>Mode</key>
+        <value>insert</value>
+    </entry>
+    <entry>
+        <key>Upsert</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Update Query Key</key>
+    </entry>
+    <entry>
+        <key>putmongo-update-query</key>
+    </entry>
+    <entry>
+        <key>put-mongo-update-mode</key>
+        <value>doc</value>
+    </entry>
+    <entry>
+        <key>Write Concern</key>
+        <value>ACKNOWLEDGED</value>
+    </entry>
+    <entry>
+        <key>Character Set</key>
+        <value>UTF-8</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>PutMongo</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.mongodb.PutMongo</type>
+                        </processors>
+                    </contents>
+                    <defaultBackPressureDataSizeThreshold>1 GB</defaultBackPressureDataSizeThreshold>
+                    <defaultBackPressureObjectThreshold>10000</defaultBackPressureObjectThreshold>
+                    <defaultFlowFileExpiration>0 sec</defaultFlowFileExpiration>
+                    <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+                    <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+                    <name>Receber pedido</name>
+                    <variables>
+                        <entry>
+                            <key>kafka_topic_pedido_novo</key>
+                            <value>NOVO_PEDIDO</value>
+                        </entry>
+                        <entry>
+                            <key>groupid_kafka_NIFI_MICROSERVICE_PEDIDO</key>
+                            <value>NIFI_MICROSERVICE_PEDIDO</value>
+                        </entry>
+                    </variables>
+                </processGroups>
+                <processGroups>
+                    <id>bec517fa-3713-32db-0000-000000000000</id>
+                    <parentGroupId>d69d4745-0e10-3224-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1232.0</x>
+                        <y>392.0</y>
+                    </position>
+                    <comments></comments>
+                    <contents>
+                        <connections>
+                            <id>1198c309-5c9f-36d8-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>d2b840a8-7d28-3342-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>675c355a-1646-3d94-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>1f23a2c2-0762-31e1-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>51ffdc37-4dc7-3261-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>738821eb-11a5-3c78-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>4a478033-eadd-34c3-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>6adc1cb4-1d91-3b56-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Original</selectedRelationships>
+                            <selectedRelationships>Retry</selectedRelationships>
+                            <source>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>820190cd-a600-3341-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>7587a057-9cf9-38f9-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>8f08d866-8a26-3457-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Failure</selectedRelationships>
+                            <selectedRelationships>No Retry</selectedRelationships>
+                            <source>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>820190cd-a600-3341-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>933b0db1-0b77-3d94-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>820190cd-a600-3341-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>43826a33-c913-351a-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>b8b7df4f-6a05-3506-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>820190cd-a600-3341-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>3e73856a-06a2-3c90-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>c12168eb-1300-3f33-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>c905ef8d-cb21-3c3a-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>failure</selectedRelationships>
+                            <source>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>738821eb-11a5-3c78-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>cf2295c4-1b06-3d28-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>ec29f0c5-80d1-3ace-0000-000000000000</id>
+<type>FUNNEL</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>failure</selectedRelationships>
+                            <source>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>675c355a-1646-3d94-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>f0e9dad2-af15-3d36-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>675c355a-1646-3d94-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>Response</selectedRelationships>
+                            <source>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>820190cd-a600-3341-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>fc2d39e8-f346-3542-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>738821eb-11a5-3c78-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>bec517fa-3713-32db-0000-000000000000</groupId>
+<id>675c355a-1646-3d94-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <funnels>
+                            <id>51ffdc37-4dc7-3261-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>1904.0</x>
+<y>1008.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>6adc1cb4-1d91-3b56-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>1512.0</x>
+<y>560.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>8f08d866-8a26-3457-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>1512.0</x>
+<y>480.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>c905ef8d-cb21-3c3a-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>1904.0</x>
+<y>896.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>d2b840a8-7d28-3342-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>840.0</x>
+<y>912.0</y>
+                            </position>
+                        </funnels>
+                        <funnels>
+                            <id>ec29f0c5-80d1-3ace-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>1520.0</x>
+<y>768.0</y>
+                            </position>
+                        </funnels>
+                        <processors>
+                            <id>3e73856a-06a2-3c90-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>704.0</x>
+<y>112.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-kafka-2-0-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>
+            <name>bootstrap.servers</name>
+        </value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>
+            <name>security.protocol</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>
+            <name>sasl.mechanism</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+        <value>
+            <name>sasl.kerberos.service.name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+        <value>
+            <name>sasl.kerberos.principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+        <value>
+            <name>sasl.kerberos.keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+        <value>
+            <name>sasl.username</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+        <value>
+            <name>sasl.password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>
+            <name>sasl.token.auth</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl.context.service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>
+            <name>topic</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic_type</key>
+        <value>
+            <name>topic_type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>honor-transactions</key>
+        <value>
+            <name>honor-transactions</name>
+        </value>
+    </entry>
+    <entry>
+        <key>group.id</key>
+        <value>
+            <name>group.id</name>
+        </value>
+    </entry>
+    <entry>
+        <key>auto.offset.reset</key>
+        <value>
+            <name>auto.offset.reset</name>
+        </value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>
+            <name>key-attribute-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+        <value>
+            <name>message-demarcator</name>
+        </value>
+    </entry>
+    <entry>
+        <key>separate-by-key</key>
+        <value>
+            <name>separate-by-key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>
+            <name>message-header-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>header-name-regex</key>
+        <value>
+            <name>header-name-regex</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.poll.records</key>
+        <value>
+            <name>max.poll.records</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max-uncommit-offset-wait</key>
+        <value>
+            <name>max-uncommit-offset-wait</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>
+            <name>Communications Timeout</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>${kafkabroker}</value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>PLAINTEXT</value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>GSSAPI</value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>${kafka_topic_pagamento_sucesso}</value>
+    </entry>
+    <entry>
+        <key>topic_type</key>
+        <value>names</value>
+    </entry>
+    <entry>
+        <key>honor-transactions</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>group.id</key>
+        <value>20</value>
+    </entry>
+    <entry>
+        <key>auto.offset.reset</key>
+        <value>latest</value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>utf-8</value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+    </entry>
+    <entry>
+        <key>separate-by-key</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>header-name-regex</key>
+    </entry>
+    <entry>
+        <key>max.poll.records</key>
+        <value>10000</value>
+    </entry>
+    <entry>
+        <key>max-uncommit-offset-wait</key>
+        <value>1 secs</value>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>60 secs</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>ConsumeKafka_2_0</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.kafka.pubsub.ConsumeKafka_2_0</type>
+                        </processors>
+                        <processors>
+                            <id>43826a33-c913-351a-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>1264.0</x>
+<y>144.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-kafka-1-0-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>
+            <name>bootstrap.servers</name>
+        </value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>
+            <name>security.protocol</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+        <value>
+            <name>sasl.kerberos.service.name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+        <value>
+            <name>sasl.kerberos.principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+        <value>
+            <name>sasl.kerberos.keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl.context.service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>
+            <name>topic</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic_type</key>
+        <value>
+            <name>topic_type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>honor-transactions</key>
+        <value>
+            <name>honor-transactions</name>
+        </value>
+    </entry>
+    <entry>
+        <key>group.id</key>
+        <value>
+            <name>group.id</name>
+        </value>
+    </entry>
+    <entry>
+        <key>auto.offset.reset</key>
+        <value>
+            <name>auto.offset.reset</name>
+        </value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>
+            <name>key-attribute-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+        <value>
+            <name>message-demarcator</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>
+            <name>message-header-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>header-name-regex</key>
+        <value>
+            <name>header-name-regex</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.poll.records</key>
+        <value>
+            <name>max.poll.records</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max-uncommit-offset-wait</key>
+        <value>
+            <name>max-uncommit-offset-wait</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>${kafkabroker}</value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>PLAINTEXT</value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>${kafka_topic_pedido_criado}</value>
+    </entry>
+    <entry>
+        <key>topic_type</key>
+        <value>names</value>
+    </entry>
+    <entry>
+        <key>honor-transactions</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>group.id</key>
+        <value>NIFI</value>
+    </entry>
+    <entry>
+        <key>auto.offset.reset</key>
+        <value>latest</value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>utf-8</value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>header-name-regex</key>
+    </entry>
+    <entry>
+        <key>max.poll.records</key>
+        <value>10000</value>
+    </entry>
+    <entry>
+        <key>max-uncommit-offset-wait</key>
+        <value>1 secs</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>ConsumeKafka_1_0</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.kafka.pubsub.ConsumeKafka_1_0</type>
+                        </processors>
+                        <processors>
+                            <id>675c355a-1646-3d94-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>872.0</x>
+<y>712.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-mongodb-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>mongo-client-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.mongodb.MongoDBClientService</identifiesControllerService>
+            <name>mongo-client-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mongo URI</key>
+        <value>
+            <name>Mongo URI</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mongo Database Name</key>
+        <value>
+            <name>Mongo Database Name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mongo Collection Name</key>
+        <value>
+            <name>Mongo Collection Name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl-context-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl-context-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl-client-auth</key>
+        <value>
+            <name>ssl-client-auth</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Mode</key>
+        <value>
+            <name>Mode</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Upsert</key>
+        <value>
+            <name>Upsert</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Update Query Key</key>
+        <value>
+            <name>Update Query Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>putmongo-update-query</key>
+        <value>
+            <name>putmongo-update-query</name>
+        </value>
+    </entry>
+    <entry>
+        <key>put-mongo-update-mode</key>
+        <value>
+            <name>put-mongo-update-mode</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Write Concern</key>
+        <value>
+            <name>Write Concern</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Character Set</key>
+        <value>
+            <name>Character Set</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>mongo-client-service</key>
+    </entry>
+    <entry>
+        <key>Mongo URI</key>
+        <value>${pagamentomongouri}</value>
+    </entry>
+    <entry>
+        <key>Mongo Database Name</key>
+        <value>${pagamentodb}</value>
+    </entry>
+    <entry>
+        <key>Mongo Collection Name</key>
+        <value>${pagamentocollection}</value>
+    </entry>
+    <entry>
+        <key>ssl-context-service</key>
+    </entry>
+    <entry>
+        <key>ssl-client-auth</key>
+        <value>REQUIRED</value>
+    </entry>
+    <entry>
+        <key>Mode</key>
+        <value>insert</value>
+    </entry>
+    <entry>
+        <key>Upsert</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Update Query Key</key>
+    </entry>
+    <entry>
+        <key>putmongo-update-query</key>
+    </entry>
+    <entry>
+        <key>put-mongo-update-mode</key>
+        <value>doc</value>
+    </entry>
+    <entry>
+        <key>Write Concern</key>
+        <value>ACKNOWLEDGED</value>
+    </entry>
+    <entry>
+        <key>Character Set</key>
+        <value>UTF-8</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>PutMongo</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.mongodb.PutMongo</type>
+                        </processors>
+                        <processors>
+                            <id>738821eb-11a5-3c78-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>1216.0</x>
+<y>920.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-kafka-2-0-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>
+            <name>bootstrap.servers</name>
+        </value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>
+            <name>security.protocol</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>
+            <name>sasl.mechanism</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+        <value>
+            <name>sasl.kerberos.service.name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+            <name>kerberos-credentials-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+        <value>
+            <name>sasl.kerberos.principal</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+        <value>
+            <name>sasl.kerberos.keytab</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+        <value>
+            <name>sasl.username</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+        <value>
+            <name>sasl.password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>
+            <name>sasl.token.auth</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>ssl.context.service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>
+            <name>topic</name>
+        </value>
+    </entry>
+    <entry>
+        <key>acks</key>
+        <value>
+            <name>acks</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Failure Strategy</key>
+        <value>
+            <name>Failure Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>use-transactions</key>
+        <value>
+            <name>use-transactions</name>
+        </value>
+    </entry>
+    <entry>
+        <key>transactional-id-prefix</key>
+        <value>
+            <name>transactional-id-prefix</name>
+        </value>
+    </entry>
+    <entry>
+        <key>attribute-name-regex</key>
+        <value>
+            <name>attribute-name-regex</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>
+            <name>message-header-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>kafka-key</key>
+        <value>
+            <name>kafka-key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>
+            <name>key-attribute-encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+        <value>
+            <name>message-demarcator</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.request.size</key>
+        <value>
+            <name>max.request.size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ack.wait.time</key>
+        <value>
+            <name>ack.wait.time</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max.block.ms</key>
+        <value>
+            <name>max.block.ms</name>
+        </value>
+    </entry>
+    <entry>
+        <key>partitioner.class</key>
+        <value>
+            <name>partitioner.class</name>
+        </value>
+    </entry>
+    <entry>
+        <key>partition</key>
+        <value>
+            <name>partition</name>
+        </value>
+    </entry>
+    <entry>
+        <key>compression.type</key>
+        <value>
+            <name>compression.type</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>bootstrap.servers</key>
+        <value>${kafkabroker}</value>
+    </entry>
+    <entry>
+        <key>security.protocol</key>
+        <value>PLAINTEXT</value>
+    </entry>
+    <entry>
+        <key>sasl.mechanism</key>
+        <value>GSSAPI</value>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.service.name</key>
+    </entry>
+    <entry>
+        <key>kerberos-credentials-service</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.principal</key>
+    </entry>
+    <entry>
+        <key>sasl.kerberos.keytab</key>
+    </entry>
+    <entry>
+        <key>sasl.username</key>
+    </entry>
+    <entry>
+        <key>sasl.password</key>
+    </entry>
+    <entry>
+        <key>sasl.token.auth</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>ssl.context.service</key>
+    </entry>
+    <entry>
+        <key>topic</key>
+        <value>${kafka_topic_pagamento_sucesso}</value>
+    </entry>
+    <entry>
+        <key>acks</key>
+        <value>all</value>
+    </entry>
+    <entry>
+        <key>Failure Strategy</key>
+        <value>Route to Failure</value>
+    </entry>
+    <entry>
+        <key>use-transactions</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>transactional-id-prefix</key>
+    </entry>
+    <entry>
+        <key>attribute-name-regex</key>
+    </entry>
+    <entry>
+        <key>message-header-encoding</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>kafka-key</key>
+    </entry>
+    <entry>
+        <key>key-attribute-encoding</key>
+        <value>utf-8</value>
+    </entry>
+    <entry>
+        <key>message-demarcator</key>
+    </entry>
+    <entry>
+        <key>max.request.size</key>
+        <value>1 MB</value>
+    </entry>
+    <entry>
+        <key>ack.wait.time</key>
+        <value>5 secs</value>
+    </entry>
+    <entry>
+        <key>max.block.ms</key>
+        <value>5 sec</value>
+    </entry>
+    <entry>
+        <key>partitioner.class</key>
+        <value>org.apache.kafka.clients.producer.internals.DefaultPartitioner</value>
+    </entry>
+    <entry>
+        <key>partition</key>
+    </entry>
+    <entry>
+        <key>compression.type</key>
+        <value>none</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>PublishKafka_2_0</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.kafka.pubsub.PublishKafka_2_0</type>
+                        </processors>
+                        <processors>
+                            <id>820190cd-a600-3341-0000-000000000000</id>
+                            <parentGroupId>bec517fa-3713-32db-0000-000000000000</parentGroupId>
+                            <position>
+<x>872.0</x>
+<y>496.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.15.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>HTTP Method</key>
+        <value>
+            <name>HTTP Method</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Remote URL</key>
+        <value>
+            <name>Remote URL</name>
+        </value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>SSL Context Service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Connection Timeout</key>
+        <value>
+            <name>Connection Timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Read Timeout</key>
+        <value>
+            <name>Read Timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>idle-timeout</key>
+        <value>
+            <name>idle-timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>max-idle-connections</key>
+        <value>
+            <name>max-idle-connections</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Include Date Header</key>
+        <value>
+            <name>Include Date Header</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Follow Redirects</key>
+        <value>
+            <name>Follow Redirects</name>
+        </value>
+    </entry>
+    <entry>
+        <key>disable-http2</key>
+        <value>
+            <name>disable-http2</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Attributes to Send</key>
+        <value>
+            <name>Attributes to Send</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Useragent</key>
+        <value>
+            <name>Useragent</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Basic Authentication Username</key>
+        <value>
+            <name>Basic Authentication Username</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Basic Authentication Password</key>
+        <value>
+            <name>Basic Authentication Password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>proxy-configuration-service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.proxy.ProxyConfigurationService</identifiesControllerService>
+            <name>proxy-configuration-service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+        <value>
+            <name>Proxy Host</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Port</key>
+        <value>
+            <name>Proxy Port</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Type</key>
+        <value>
+            <name>Proxy Type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-user</key>
+        <value>
+            <name>invokehttp-proxy-user</name>
+        </value>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-password</key>
+        <value>
+            <name>invokehttp-proxy-password</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Put Response Body In Attribute</key>
+        <value>
+            <name>Put Response Body In Attribute</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Max Length To Put In Attribute</key>
+        <value>
+            <name>Max Length To Put In Attribute</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Digest Authentication</key>
+        <value>
+            <name>Digest Authentication</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Always Output Response</key>
+        <value>
+            <name>Always Output Response</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Add Response Headers to Request</key>
+        <value>
+            <name>Add Response Headers to Request</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Content-Type</key>
+        <value>
+            <name>Content-Type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>send-message-body</key>
+        <value>
+            <name>send-message-body</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Use Chunked Encoding</key>
+        <value>
+            <name>Use Chunked Encoding</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Penalize on "No Retry"</key>
+        <value>
+            <name>Penalize on "No Retry"</name>
+        </value>
+    </entry>
+    <entry>
+        <key>use-etag</key>
+        <value>
+            <name>use-etag</name>
+        </value>
+    </entry>
+    <entry>
+        <key>etag-max-cache-size</key>
+        <value>
+            <name>etag-max-cache-size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>ignore-response-content</key>
+        <value>
+            <name>ignore-response-content</name>
+        </value>
+    </entry>
+    <entry>
+        <key>form-body-form-name</key>
+        <value>
+            <name>form-body-form-name</name>
+        </value>
+    </entry>
+    <entry>
+        <key>set-form-filename</key>
+        <value>
+            <name>set-form-filename</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>HTTP Method</key>
+        <value>POST</value>
+    </entry>
+    <entry>
+        <key>Remote URL</key>
+        <value>${endpoint_pagamento}</value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+    </entry>
+    <entry>
+        <key>Connection Timeout</key>
+        <value>5 secs</value>
+    </entry>
+    <entry>
+        <key>Read Timeout</key>
+        <value>15 secs</value>
+    </entry>
+    <entry>
+        <key>idle-timeout</key>
+        <value>5 mins</value>
+    </entry>
+    <entry>
+        <key>max-idle-connections</key>
+        <value>5</value>
+    </entry>
+    <entry>
+        <key>Include Date Header</key>
+        <value>True</value>
+    </entry>
+    <entry>
+        <key>Follow Redirects</key>
+        <value>True</value>
+    </entry>
+    <entry>
+        <key>disable-http2</key>
+        <value>False</value>
+    </entry>
+    <entry>
+        <key>Attributes to Send</key>
+    </entry>
+    <entry>
+        <key>Useragent</key>
+    </entry>
+    <entry>
+        <key>Basic Authentication Username</key>
+    </entry>
+    <entry>
+        <key>Basic Authentication Password</key>
+    </entry>
+    <entry>
+        <key>proxy-configuration-service</key>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+    </entry>
+    <entry>
+        <key>Proxy Port</key>
+    </entry>
+    <entry>
+        <key>Proxy Type</key>
+        <value>http</value>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-user</key>
+    </entry>
+    <entry>
+        <key>invokehttp-proxy-password</key>
+    </entry>
+    <entry>
+        <key>Put Response Body In Attribute</key>
+    </entry>
+    <entry>
+        <key>Max Length To Put In Attribute</key>
+        <value>256</value>
+    </entry>
+    <entry>
+        <key>Digest Authentication</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Always Output Response</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Add Response Headers to Request</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Content-Type</key>
+        <value>${mime.type}</value>
+    </entry>
+    <entry>
+        <key>send-message-body</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>Use Chunked Encoding</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Penalize on "No Retry"</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>use-etag</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>etag-max-cache-size</key>
+        <value>10MB</value>
+    </entry>
+    <entry>
+        <key>ignore-response-content</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>form-body-form-name</key>
+    </entry>
+    <entry>
+        <key>set-form-filename</key>
+        <value>true</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Autorizar pagamento (InvokeHTTP)</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>No Retry</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Original</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Response</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>Retry</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+                        </processors>
+                    </contents>
+                    <defaultBackPressureDataSizeThreshold>1 GB</defaultBackPressureDataSizeThreshold>
+                    <defaultBackPressureObjectThreshold>10000</defaultBackPressureObjectThreshold>
+                    <defaultFlowFileExpiration>0 sec</defaultFlowFileExpiration>
+                    <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+                    <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+                    <name>Autorizar pagamento</name>
+                    <variables>
+                        <entry>
+                            <key>endpoint_pagamento</key>
+                            <value>http://mockbin.org/bin/4d9ec76e-4748-4786-a6d2-a103f6432e79</value>
+                        </entry>
+                    </variables>
+                </processGroups>
+            </contents>
+            <defaultBackPressureDataSizeThreshold>1 GB</defaultBackPressureDataSizeThreshold>
+            <defaultBackPressureObjectThreshold>10000</defaultBackPressureObjectThreshold>
+            <defaultFlowFileExpiration>0 sec</defaultFlowFileExpiration>
+            <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+            <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+            <name>SAGA transaction</name>
+            <variables>
+                <entry>
+                    <key>kafka_topic_pagamento_sucesso</key>
+                    <value>PAGAMENTO_SUCESSO</value>
+                </entry>
+                <entry>
+                    <key>kafkabroker</key>
+                    <value>kafka:9092</value>
+                </entry>
+                <entry>
+                    <key>pagamentocollection</key>
+                    <value>payment</value>
+                </entry>
+                <entry>
+                    <key>pagamentodb</key>
+                    <value>pagamento</value>
+                </entry>
+                <entry>
+                    <key>pedidocollection</key>
+                    <value>order</value>
+                </entry>
+                <entry>
+                    <key>kafka_topic_pedido_criado</key>
+                    <value>PEDIDO_CRIADO</value>
+                </entry>
+                <entry>
+                    <key>pedidomongouri</key>
+                    <value>mongodb://mongo:27017</value>
+                </entry>
+                <entry>
+                    <key>logisticacollection</key>
+                    <value>delivery</value>
+                </entry>
+                <entry>
+                    <key>logisticadb</key>
+                    <value>logistica</value>
+                </entry>
+                <entry>
+                    <key>logisticamongouri</key>
+                    <value>mongodb://mongo:27017</value>
+                </entry>
+                <entry>
+                    <key>pagamentomongouri</key>
+                    <value>mongodb://mongo:27017</value>
+                </entry>
+                <entry>
+                    <key>pedidodb</key>
+                    <value>pedido</value>
+                </entry>
+                <entry>
+                    <key>kafka_topic_pedido_enviado</key>
+                    <value>LOG_PEDIDO_ENVIADO</value>
+                </entry>
+                <entry>
+                    <key>kafka_topic_estoque_atualizado</key>
+                    <value>ESTOQUE_ATUALIZADO</value>
+                </entry>
+            </variables>
+        </processGroups>
+    </snippet>
+    <timestamp>11/27/2021 04:13:24 UTC</timestamp>
+</template>
