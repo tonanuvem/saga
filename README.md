@@ -49,3 +49,5 @@ Links:
 > https://www.compose.com/articles/mongo-to-mongo-data-moves-with-nifi/
 <br> <br>
 > https://nifi.apache.org/docs/nifi-docs/html/expression-language-guide.html
+<br> <br>
+> https://community.cloudera.com/t5/Support-Questions/Nifi-How-to-add-key-value-to-json/td-p/200907
