@@ -3211,7 +3211,7 @@
       "user":"user_id"
    },
    "order_data":{
-      "order_id":"1234512345",
+      "order_id":"${UUID()}",
       "order_amount":100,
       "items":[
          {
