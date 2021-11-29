@@ -17,7 +17,7 @@ services:
 
   producer_pedido:
     image: tonanuvem/kafka_producer:latest
-    container_name: producer
+    container_name: producer_pedido
     ports:
     - "5001:5001"
     restart: always
@@ -32,7 +32,7 @@ services:
 
   producer_falha:
     image: tonanuvem/kafka_producer:latest
-    container_name: producer
+    container_name: producer_falha
     ports:
     - "6001:5001"
     restart: always
