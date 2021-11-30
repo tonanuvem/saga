@@ -51,3 +51,5 @@ Links:
 > https://nifi.apache.org/docs/nifi-docs/html/expression-language-guide.html
 <br> <br>
 > https://community.cloudera.com/t5/Support-Questions/Nifi-How-to-add-key-value-to-json/td-p/200907
+<br> <br>
+> https://community.cloudera.com/t5/Community-Articles/Jolt-quick-reference-for-Nifi-Jolt-Processors/ta-p/244350
