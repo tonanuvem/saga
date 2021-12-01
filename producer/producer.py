@@ -38,7 +38,7 @@ def create(msg):
     print ('Sucesso no envio. Topico: '+str(record_metadata.topic)+' Particao :' + str(record_metadata.partition) + ' Offset: ' + str(record_metadata.offset))
     postMSG_criada(texto)
     return make_response(
-        "Pedido criado: "+str(texto), 201
+        "Evento criado: "+str(texto), 201
     )
     
 def postMSG_criada(msg):
