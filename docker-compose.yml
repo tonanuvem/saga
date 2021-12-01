@@ -14,7 +14,7 @@ services:
       - ./templates/:/opt/nifi/nifi-current/conf/templates/
     restart: always 
 
-  producer_pedido:
+  producer_nifi:
     build:
       context: producer/
     container_name: producer_pedido
