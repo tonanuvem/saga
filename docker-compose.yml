@@ -15,35 +15,20 @@ services:
       - ./templates/:/opt/nifi/nifi-current/conf/templates/
     restart: always 
 
-#  producer_pedido:
-#    image: tonanuvem/kafka_producer:latest
-#    container_name: producer_pedido
-#    ports:
-#    - "5001:5001"
-#    restart: always
-#    environment:
-#      - "HOST=kafka"
-#      - "PORTA=9092"
-#      - "TOPICO=PEDIDO_CRIADO"
-#      - "WEBHOOK=inserir"
-#      - "CANAL=lab-testes"
-#    depends_on:
-#      - kafka
-
-#  producer_falha:
-#    image: tonanuvem/kafka_producer:latest
-#    container_name: producer_falha
-#    ports:
-#    - "6001:5001"
-#    restart: always
-#    environment:
-#      - "HOST=kafka"
-#      - "PORTA=9092"
-#      - "TOPICO=CANCELAR_ENVIO_PEDIDO"
-#      - "WEBHOOK=inserir"
-#      - "CANAL=lab-testes"
-#    depends_on:
-#      - kafka
+  producer_pedido:
+    image: tonanuvem/kafka_producer:latest
+    container_name: producer_pedido
+    ports:
+    - "5001:5001"
+    restart: always
+    environment:
+      - "HOST=kafka"
+      - "PORTA=9092"
+      - "TOPICO=NOVO_PEDIDO"
+      - "WEBHOOK=inserir_webhook"
+      - "CANAL=lab-testes"
+    depends_on:
+      - kafka
       
   zookeeper:
     image: "confluentinc/cp-zookeeper"
