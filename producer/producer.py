@@ -46,6 +46,9 @@ def postMSG_criada(msg):
     # para o Microsoft Teams, usa somente o campo Text (https://docs.microsoft.com/pt-br/outlook/actionable-messages/message-card-reference#card-examples)
     sdata = formatMSG(msg)
     url = os.environ['WEBHOOK']
+    if url == "inserir_webhook":
+        return
+    # Continua com o envio somente se a URL do Webhook estiver configurada:
     r = requests.post(url, sdata, headers={'Content-Type': 'application/json'})
     if r.status_code == 200:
       print('SUCCEDED: Sent webhook')
