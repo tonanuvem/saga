@@ -7,3 +7,6 @@ while [ "$(docker logs saga_nifi_1 2>&1 | grep "Controller initialization took" 
   printf "."
   sleep 1
 done
+echo ""
+echo "Config OK"
+echo ""
