@@ -5,6 +5,8 @@ Exemplo de SAGA utilizando NIFI para orquestrar event-driven microservices
 Motivação:
 - A arquitetura de microsserviços decompõe um aplicativo em serviços, cada um correspondendo a uma capacidade de negócios. Desafios dessa arquitetura envolvem transações distribuídas, separação em domínio e consultas de informações decompostas em várias entidades aplicando a ideia de um "agregado do DDD (Domain Driven Design)". Dentro de cada serviço, uma transação cria ou atualiza um único agregado. Os eventos são usados para manter a consistência dos dados entre agregados.
 
+![alt text](SAGA_NIFI.png)
+
 Contexto:
 
 - Terminologia DDD engloba dentre seus termos: Entidades, Objetos de Valor (atributos) e Agregados (conjunto de entidades/atributos). 
