@@ -10329,7 +10329,7 @@
                 </entry>
                 <entry>
                     <key>${kafka_cancel_pedido_fim}</key>
-                    <value>C0_CANCEL_PEDIDO_FIM</value>
+                    <value>C5_CANCEL_PEDIDO_FIM</value>
                 </entry>
                 <entry>
                     <key>kafka_cancel_estoque_atualizado</key>
