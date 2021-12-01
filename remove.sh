@@ -1,1 +1,1 @@
-docker-compose stop && docker-compose rm && docker volume prune && git pull
+docker-compose stop && docker-compose rm -f && docker volume prune -f && git pull
