@@ -9,7 +9,7 @@ Motivação:
 
 Contexto:
 
-- Terminologia DDD engloba dentre seus termos: Entidades, Objetos de Valor (atributos) e Agregados (conjunto de entidades/atributos). 
+- Terminologia DDD engloba dentre seus termos: Entidades, Objetos de Valor (atributos) e Agregados (conjunto de entidades+atributos). 
 - Os agregados são objetos que encapsulam outras entidades/atributos e são responsáveis por impor restrições (violação de uma regra de negócios).
 - Pode haver vários agregados dentro de um determinado contexto (bounded context).
 - Dentro de cada contexto, precisamos identificar os limites transacionais onde há restrições.
