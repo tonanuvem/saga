@@ -56,6 +56,8 @@ Links:
 <br> <br>
 > https://community.cloudera.com/t5/Community-Articles/ExecuteScript-Cookbook-part-1/ta-p/248922
 <br> <br>
+> http://funnifi.blogspot.com/2016/03/executescript-json-to-json-revisited_14.html
+<br> <br>
 > https://community.cloudera.com/t5/Community-Articles/Jolt-quick-reference-for-Nifi-Jolt-Processors/ta-p/244350
 <br> <br>
 > https://jolt-demo.appspot.com/
