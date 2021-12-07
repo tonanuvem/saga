@@ -15,7 +15,7 @@ services:
     restart: always 
 
   producer_nifi:
-    image:tonanuvem/producer_nifi
+    image: tonanuvem/producer_nifi
     ports:
     - "5001:5001"
     restart: always
