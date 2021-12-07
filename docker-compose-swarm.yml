@@ -33,7 +33,8 @@ services:
     deploy:
       replicas: 1
       restart_policy:
-        condition: always
+        condition: on-failure
+        max_attempts: 3
 
   zookeeper:
     image: "confluentinc/cp-zookeeper"
