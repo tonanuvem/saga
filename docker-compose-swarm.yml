@@ -15,9 +15,7 @@ services:
     restart: always 
 
   producer_nifi:
-    build:
-      context: producer/
-    container_name: producer_pedido
+    image:tonanuvem/producer_nifi
     ports:
     - "5001:5001"
     restart: always
