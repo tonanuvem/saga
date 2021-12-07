@@ -12,7 +12,11 @@ services:
       - "8010:8010"
     volumes:
       - ./templates/:/opt/nifi/nifi-current/conf/templates/
-    restart: always 
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
 
   producer_nifi:
     image: tonanuvem/producer_nifi
