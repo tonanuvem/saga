@@ -84,3 +84,8 @@ services:
 
 volumes:
   mongodata:
+
+networks:
+  net:
+    driver: overlay
+    attachable: true
