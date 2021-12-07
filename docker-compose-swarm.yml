@@ -15,8 +15,7 @@ services:
     deploy:
       replicas: 1
       restart_policy:
-        condition: on-failure
-        max_attempts: 3
+        condition: unless-stopped
 
   producer_nifi:
     image: tonanuvem/producer_nifi
@@ -38,7 +37,10 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181    
     ports: 
       - "2181:2181"
-    restart: always      
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: unless-stopped
 
   # usar no Nifi: PublishKafka_1_0
   kafka:
@@ -55,7 +57,10 @@ services:
       - "9092:9092"
     depends_on:
       - zookeeper
-    restart: always      
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: unless-stopped
   
   # ferramenta visualização Kafka
   kowl:
