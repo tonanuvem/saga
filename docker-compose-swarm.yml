@@ -22,7 +22,6 @@ services:
     image: tonanuvem/producer_nifi
     ports:
     - "5001:5001"
-    restart: always
     environment:
       - "HOST=kafka"
       - "PORTA=9092"
@@ -31,7 +30,11 @@ services:
       - "CANAL=lab-testes"
     depends_on:
       - kafka
-      
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: always
+
   zookeeper:
     image: "confluentinc/cp-zookeeper"
     environment:
