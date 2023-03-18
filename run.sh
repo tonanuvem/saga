@@ -5,7 +5,8 @@ msglog="Started Application Controller"
 
 echo ""
 echo "Aguardando a configuração do NIFI."
-while [ "$(docker logs saga_nifi_1 2>&1 | grep "$msglog" | wc -l)" != "1" ]; do
+#while [ "$(docker logs saga_nifi_1 2>&1 | grep "$msglog" | wc -l)" != "1" ]; do
+while [ "$(docker logs saga-nifi-1 2>&1 | grep "$msglog" | wc -l)" != "1" ]; do
   printf "."
   sleep 1
 done
