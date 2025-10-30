@@ -26,7 +26,7 @@ services:
       - "PORTA=9092"
       - "TOPICO=NOVO_PEDIDO"
       - "WEBHOOK=inserir_webhook"
-      - "CANAL=lab-testes"
+      - "CANAL=webhook"
     depends_on:
       - kafka
       
@@ -40,7 +40,7 @@ services:
 
   # usar no Nifi: PublishKafka_1_0
   kafka:
-    image: "confluentinc/cp-kafka"
+    image: "confluentinc/cp-kafka:7.3.15.amd64"
     environment:
       KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
       KAFKA_ADVERTISED_HOST_NAME: "kafka"
