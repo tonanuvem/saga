@@ -1,5 +1,3 @@
-version: "3.4"
-
 services:
 
   # Automação do Fluxo de dados
