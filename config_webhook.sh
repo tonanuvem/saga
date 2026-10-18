@@ -12,8 +12,9 @@ if grep -q "inserir_webhook" ./producer/Dockerfile 2>/dev/null || \
         exit 1
     fi
 
-    sed -i "s|inserir_webhook|$WEBHOOK|g" ./producer/Dockerfile
-    sed -i "s|inserir_webhook|$WEBHOOK|g" ./docker-compose.yml
+    WEBHOOK_ESC=$(printf '%s' "$WEBHOOK" | sed 's/[&/\]/\\&/g')
+    sed -i "s|inserir_webhook|$WEBHOOK_ESC|g" ./producer/Dockerfile
+    sed -i "s|inserir_webhook|$WEBHOOK_ESC|g" ./docker-compose.yml
     echo "Webhook configurado com sucesso."
 else
     echo "AVISO: Webhook já foi configurado anteriormente."
