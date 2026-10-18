@@ -56,11 +56,25 @@ def postMSG_criada(msg):
       print('FAILED: Send webhook')
 
 def formatMSG(msg):
-  canal = os.environ['CANAL']
-  payload = {
-    "channel":canal,
-    "username":'app_kafka_producer',
-    "text": msg,
-    "icon_emoji":':mailbox_with_mail:'
-  }
+  url = os.environ['WEBHOOK']
+  if 'hooks.slack.com' in url:
+    canal = os.environ['CANAL']
+    payload = {
+      "channel": canal,
+      "username": 'app_kafka_producer',
+      "text": msg,
+      "icon_emoji": ':mailbox_with_mail:'
+    }
+  else:
+    payload = {
+      "@type": "MessageCard",
+      "@context": "http://schema.org/extensions",
+      "themeColor": "0072C6",
+      "summary": "Nova Mensagem",
+      "sections": [{
+        "activityTitle": msg,
+        "activitySubtitle": "Solicitado via Kafka Producer",
+        "activityImage": "https://cdn4.iconfinder.com/data/icons/pop-scenes/1000/workspace___work_from_home_laptop_computer_drink_beverage-1024.png"
+      }]
+    }
   return json.dumps(payload)
