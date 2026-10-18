@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 # Verifica se já foi configurado
@@ -7,7 +7,7 @@ if grep -q "inserir_webhook" ./producer/Dockerfile 2>/dev/null || \
     echo "Digite a URL que está no canal #webhook:"
     read WEBHOOK
 
-    if [[ -z "$WEBHOOK" ]]; then
+    if [ -z "$WEBHOOK" ]; then
         echo "ERRO: URL não pode ser vazia."
         exit 1
     fi
