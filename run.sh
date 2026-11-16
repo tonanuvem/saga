@@ -1,21 +1,23 @@
-#!/bin/bash
+#!/bin/sh
 
 # Portas exigidas pelos servicos do docker-compose.yml (porta:servico)
-PORTAS_PROJETO=(
-  "8090:nifi (Web UI)"
-  "8010:nifi (ListenHTTP)"
-  "5001:producer_nifi (producer_pedido)"
-  "2181:zookeeper"
-  "9092:kafka"
-  "8070:kowl (Kafka UI)"
-  "8081:mongoexpress (Mongo UI)"
-  "27017:mongo (MongoDB)"
-)
+PORTAS_PROJETO="8090:nifi (Web UI)
+8010:nifi (ListenHTTP)
+5001:producer_nifi (producer_pedido)
+2181:zookeeper
+9092:kafka
+8070:kowl (Kafka UI)
+8081:mongoexpress (Mongo UI)
+27017:mongo (MongoDB)"
 
 echo "Verificando portas necessárias ao projeto SAGA..."
-CONFLITOS=()
+CONFLITOS=""
 
-for item in "${PORTAS_PROJETO[@]}"; do
+OLD_IFS="$IFS"
+IFS='
+'
+for item in $PORTAS_PROJETO; do
+  IFS="$OLD_IFS"
   PORTA="${item%%:*}"
   SERVICO="${item#*:}"
 
@@ -30,18 +32,24 @@ for item in "${PORTAS_PROJETO[@]}"; do
       PROC_INFO=$(sudo lsof -nP -iTCP:"$PORTA" -sTCP:LISTEN -F pc 2>/dev/null | paste -sd ' ' - | sed 's/^p/PID /; s/ c/ - /')
       ORIGEM="processo local -> ${PROC_INFO:-desconhecido}"
     fi
-    CONFLITOS+=(" - Porta $PORTA [$SERVICO] em uso por: $ORIGEM")
+    LINHA=" - Porta $PORTA [$SERVICO] em uso por: $ORIGEM"
+    if [ -z "$CONFLITOS" ]; then
+      CONFLITOS="$LINHA"
+    else
+      CONFLITOS="$CONFLITOS
+$LINHA"
+    fi
   fi
 done
+IFS="$OLD_IFS"
 
-if [ "${#CONFLITOS[@]}" -gt 0 ]; then
+if [ -n "$CONFLITOS" ]; then
   echo ""
   echo "⚠️  ATENÇÃO: Foram encontrados conflitos nas seguintes portas:"
-  for c in "${CONFLITOS[@]}"; do
-    echo "$c"
-  done
+  echo "$CONFLITOS"
   echo ""
-  read -r -p "Deseja continuar mesmo assim? (s/N): " RESPOSTA
+  printf "Deseja continuar mesmo assim? (s/N): "
+  read -r RESPOSTA
   case "$RESPOSTA" in
     [sS]|[sS][iI][mM])
       echo "Continuando a execução..."
